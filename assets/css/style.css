@@ -1,0 +1,99 @@
+/*////////////////////////////////////////////////////////////////////
+メインビジュアル
+/////////////////////////////////////////////////////////////////////*/
+
+#mv {
+  background: url(../img/milkyway.jpg) top center no-repeat;
+  height: 400px;
+  position: relative;
+}
+
+#mv h1 {
+  color: azure;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+
+/*////////////////////////////////////////////////////////////////////
+セクション-アバウト
+/////////////////////////////////////////////////////////////////////*/
+
+#about {
+  text-align: center;
+}
+
+/*/ ///////////////////////////////////////////////////////////////////
+セクション-ワークス
+/////////////////////////////////////////////////////////////////////*/
+
+#works .work-container {
+  justify-content: space-around;
+}
+
+#works .work-area img {
+  width: 350px;
+}
+
+/*////////////////////////////////////////////////////////////////////
+セクション-スキル
+/////////////////////////////////////////////////////////////////////*/
+
+#skills .tabs {
+  display: flex;
+  justify-content: center;
+}
+
+#skills .tabs-item {
+  width: 32%;
+}
+
+#skills .tabs-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #bbb; */
+  height: 40px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+#skills .tabs-item a:hover {
+  opacity: 0.7;
+}
+
+.content {
+  display: none;
+}
+
+.content.active {
+  display: block;
+}
+
+.active {
+  background-color: #fff;
+}
+
+.item1 {
+  background-color: aquamarine;
+}
+
+#skills .skill-box {
+  margin-top: 40px;
+}
+#skills .s-title::before {
+  content: url(../img/list-img-1.png);
+  margin-right: 15px;
+}
+
+#skills .s-title {
+  font-size: 24px;
+}
+
+/*/ ///////////////////////////////////////////////////////////////////
+セクション-コンタクト
+/////////////////////////////////////////////////////////////////////*/
+
+#contact {
+  text-align: center;
+}
