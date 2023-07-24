@@ -39,6 +39,11 @@
 セクション-スキル
 /////////////////////////////////////////////////////////////////////*/
 
+#skills {
+  background-color: #fff;
+  width: 100%;
+  padding-bottom: 100px;
+}
 #skills .tabs {
   display: flex;
   justify-content: center;
@@ -46,6 +51,30 @@
 
 #skills .tabs-item {
   width: 32%;
+  border: #000 3px solid;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  height: 50px;
+  font-weight: bold;
+}
+
+.item1 a {
+  background-color: #f9d949;
+  height: 35px;
+  line-height: 30px;
+  display: block;
+
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+}
+
+.item2 a {
+  background-color: #f45050;
+  height: 35px;
+  line-height: 30px;
+  display: block;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
 }
 
 #skills .tabs-item a {
@@ -53,9 +82,6 @@
   align-items: center;
   justify-content: center;
   /* background-color: #bbb; */
-  height: 40px;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
 }
 
 #skills .tabs-item a:hover {
@@ -68,19 +94,36 @@
 
 .content.active {
   display: block;
-}
-
-.active {
   background-color: #fff;
 }
 
-.item1 {
-  background-color: aquamarine;
+#skills .career-box {
+  padding: 20px;
 }
 
 #skills .skill-box {
   margin-top: 40px;
 }
+
+#skills .description-area {
+  background-color: #f0f0f0;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: inset 0 10px 25px 0 rgba(0, 0, 0, 0.1);
+}
+
+#skills .private {
+  text-align: right;
+  background-color: #f0f0f0;
+}
+#skills .skill-box {
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  box-shadow: inset 0 10px 25px 0 rgba(0, 0, 0, 0.1);
+}
+
 #skills .s-title::before {
   content: url(../img/list-img-1.png);
   margin-right: 15px;
