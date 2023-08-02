@@ -9,9 +9,10 @@ html {
 }
 
 body {
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: #2a2a2a;
   background-color: #f0f0f0;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .wrapper {
@@ -20,13 +21,10 @@ body {
   padding: 0 5%;
 }
 
-.area {
-  margin-bottom: 100px;
-}
 .sec-title {
   text-align: center;
   font-size: 32px;
-  padding: 40px 0 60px 0;
+  padding: 90px 0 60px 0;
 
   /* animation-name: none;
   animation-duration: 0.5s;

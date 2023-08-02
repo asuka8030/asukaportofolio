@@ -3,7 +3,7 @@
 /////////////////////////////////////////////////////////////////////*/
 
 #mv {
-  background: url(../img/milkyway.jpg) top center no-repeat;
+  background: url(../img/tinanago.jpg) center center no-repeat;
   height: 400px;
   position: relative;
 }
@@ -12,10 +12,10 @@
   color: azure;
   position: absolute;
   top: 20%;
-  left: 10%;
+  left: 15%;
 }
 
-/*////////////////////////////////////////////////////////////////////
+/*/ ///////////////////////////////////////////////////////////////////
 セクション-アバウト
 /////////////////////////////////////////////////////////////////////*/
 
@@ -23,19 +23,27 @@
   text-align: center;
 }
 
+.about-text {
+  margin-top: 50px;
+}
+
 /*/ ///////////////////////////////////////////////////////////////////
 セクション-ワークス
 /////////////////////////////////////////////////////////////////////*/
+
+#works {
+  padding-bottom: 100px;
+}
 
 #works .work-container {
   justify-content: space-around;
 }
 
-#works .work-area img {
-  width: 350px;
+#works .work-area {
+  width: 30%;
 }
 
-/*////////////////////////////////////////////////////////////////////
+/*/ ///////////////////////////////////////////////////////////////////
 セクション-スキル
 /////////////////////////////////////////////////////////////////////*/
 
@@ -47,32 +55,32 @@
 #skills .tabs {
   display: flex;
   justify-content: center;
+  border-bottom: 3px solid #000;
 }
 
 #skills .tabs-item {
-  width: 32%;
+  width: 21%;
   border: #000 3px solid;
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
   height: 50px;
   font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 0.1rem;
 }
 
 .item1 a {
-  background-color: #f9d949;
-  height: 35px;
-  line-height: 30px;
-  display: block;
-
+  background-color: #4a3824;
+  color: #fff;
+  height: 47px;
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
 }
 
 .item2 a {
-  background-color: #f45050;
-  height: 35px;
-  line-height: 30px;
-  display: block;
+  background-color: #c69c6d;
+  color: #fff;
+  height: 47px;
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
 }
@@ -81,11 +89,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: #bbb; */
 }
 
 #skills .tabs-item a:hover {
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .content {
@@ -97,40 +104,62 @@
   background-color: #fff;
 }
 
-#skills .career-box {
-  padding: 20px;
-}
-
-#skills .skill-box {
-  margin-top: 40px;
-}
-
 #skills .description-area {
-  background-color: #f0f0f0;
-  margin: 20px;
+  background-color: #4a3824;
+  color: #fff;
+  margin: 20px 0;
   padding: 10px;
+  border: #000 3px solid;
   border-radius: 12px;
   box-shadow: inset 0 10px 25px 0 rgba(0, 0, 0, 0.1);
 }
 
-#skills .private {
-  text-align: right;
-  background-color: #f0f0f0;
-}
 #skills .skill-box {
-  padding: 20px;
-  background-color: #f0f0f0;
+  padding: 10px;
+  color: #fff;
+  background-color: #c69c6d;
+  border: #000 3px solid;
+  margin: 20px 0;
   border-radius: 12px;
   box-shadow: inset 0 10px 25px 0 rgba(0, 0, 0, 0.1);
-}
-
-#skills .s-title::before {
-  content: url(../img/list-img-1.png);
-  margin-right: 15px;
 }
 
 #skills .s-title {
-  font-size: 24px;
+  font-size: 20px;
+}
+
+#skills .s-title::before {
+  content: "";
+  display: inline-block;
+  width: 50px; /*画像の幅*/
+  height: 50px; /*画像の高さ*/
+  background-size: contain;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+#skills .s1:before {
+  background-image: url(../img/htmlcss.png);
+}
+
+#skills .s2:before {
+  background-image: url(../img/wp.png);
+}
+
+#skills .s3:before {
+  background-image: url(../img/js.png);
+}
+
+#skills .s4:before {
+  background-image: url(../img/Ai.png);
+}
+
+#skills .s5:before {
+  background-image: url(../img/Ps.png);
+}
+
+#skills .s6:before {
+  background-image: url(../img/Gitgitnub.png);
 }
 
 /*/ ///////////////////////////////////////////////////////////////////
@@ -139,4 +168,70 @@
 
 #contact {
   text-align: center;
+}
+
+#contact .mail-img {
+  margin-top: 20px;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+/*============
+スマホ用
+=============*/
+
+@media screen and (max-width: 480px) {
+  #works .work-container {
+    flex-direction: column;
+  }
+
+  #works .work-area {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  #skills .tabs-item {
+    width: 45%;
+  }
+}
+
+/*////////////////////////////////////////////////////////////////////
+work.HTML
+/////////////////////////////////////////////////////////////////////*/
+
+.img-area {
+  width: 30%;
+  margin: 0 auto;
+}
+.work-list {
+  max-width: 1000px;
+  padding: 0 5%;
+  margin: 0 auto 20px;
+}
+
+.work-img-area {
+  text-align: center;
+}
+
+.work-list p {
+  margin: 20px 0;
+}
+
+.link a {
+  color: #000;
+  text-decoration-line: underline;
+}
+
+.link a:hover {
+  color: #f45050;
+  width: 1.5;
+}
+
+/*============
+スマホ用
+=============*/
+
+@media screen and (max-width: 800px) {
+  .img-area {
+    width: 80%;
+  }
 }
