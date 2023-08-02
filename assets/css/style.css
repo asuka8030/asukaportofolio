@@ -43,6 +43,45 @@
   width: 30%;
 }
 
+#works h4 {
+  margin-top: 20px;
+  font-weight: normal;
+}
+
+.circle span.mask {
+  position: relative;
+  display: block;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.circle span.mask::before {
+  position: absolute;
+  content: "";
+  transform: scale(0);
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.circle span.mask:hover::before {
+  animation: circle 0.75s; /*アニメーションの名前と速度を定義*/
+}
+
+@keyframes circle {
+  0% {
+    transform: scale(0);
+    opacity: 1; /*透過なし*/
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2); /*アニメーションで大きくなった2倍の円の指定*/
+  }
+}
 /*/ ///////////////////////////////////////////////////////////////////
 セクション-スキル
 /////////////////////////////////////////////////////////////////////*/
@@ -216,14 +255,19 @@ work.HTML
   margin: 20px 0;
 }
 
+.link {
+}
+
 .link a {
+  transition: all 0.3s ease 0s;
+  display: inline-block;
   color: #000;
   text-decoration-line: underline;
 }
 
 .link a:hover {
-  color: #f45050;
-  width: 1.5;
+  color: #c69c6d;
+  transform: scale(1.1);
 }
 
 /*============
@@ -232,6 +276,6 @@ work.HTML
 
 @media screen and (max-width: 800px) {
   .img-area {
-    width: 80%;
+    width: 60%;
   }
 }

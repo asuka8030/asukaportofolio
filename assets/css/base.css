@@ -6,6 +6,7 @@
 
 html {
   font-size: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -25,21 +26,6 @@ body {
   text-align: center;
   font-size: 32px;
   padding: 90px 0 60px 0;
-
-  /* animation-name: none;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  opacity: 0;
- @keyframes fadeUpAnime {
-    from {
-      opacity: 0;
-      transform: translateY(100px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    } */
 }
 
 img {
@@ -63,17 +49,46 @@ li {
 ヘッダー
 /////////////////////////////////////////////////////////////////////*/
 
-#header ul {
+#header .gnavi {
   display: flex;
   justify-content: flex-end;
 }
 
-#header ul li {
-  margin: 20px;
+#header .gnavi li {
+  margin: 20px 0;
+  /* margin-bottom: 20px; */
 }
 
-#header ul li a {
+#header .gnavi li a {
   font-size: 16px;
+  display: block;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.gnavi li a:hover {
+  color: #c69c6d;
+}
+
+.gnavi li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /*線になる丸の形状*/
+  width: 100%;
+  height: 5px;
+  border-radius: 50%;
+  background: #c69c6d;
+  transition: all 0.3s;
+  transform: scale(0.04, 1); /*X方向0.04、Y方向1*/
+  transform-origin: center bottom; /*中央下部基点*/
+}
+
+.gnavi li a:hover::after {
+  height: 2px; /*縦幅を変化*/
+  border-radius: 0; /*丸みをなくす*/
+  transform: scale(0.8, 1); /*X方向0.8、Y方向1にスケール拡大*/
 }
 
 /*/ ///////////////////////////////////////////////////////////////////
@@ -89,4 +104,27 @@ li {
   text-align: center;
   margin: 25px 0;
   font-size: 10px;
+}
+
+/* ふわっと出現させる */
+
+.fadeUpTrigger {
+  opacity: 0;
+}
+
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
